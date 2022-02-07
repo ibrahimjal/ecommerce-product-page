@@ -46,7 +46,7 @@ closeMenu.addEventListener("click", ()=>{
 
 
 // modal code
-// open modal 
+//toggle modal open and close
 mainImg.addEventListener("click", ()=>{
     modalContainer.classList.add("close-modal")
 
