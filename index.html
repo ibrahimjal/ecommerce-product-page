@@ -5,18 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>E-commerce product page</title> 
 </head>
 <body>
+  <header>
+    <nav>
+      <div class="left-nav">
+      <div class="menu-logo">
+        <i class="fas fa-bars" id="menuBar"></i>
+        <img src="images/logo.svg" alt="" class="logo">
+      </div>
+      
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" id="closeMenu"></i>
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+   
+    <div class="icons">
+      <img src="images/icon-cart.svg" alt="" id="cart" class="cart">
+      <img src="images/image-avatar.png" alt="" class="user-icon">
+    </div> 
+   
+    </nav>
 
-  Collections
+    <div class="content">
+      <div class="modal-container" id="modalContainer">
+        <div class="modal" id="modal">
+          <i class="fas fa-times close-btn" id="closeModal"></i>
+          <img src="images/image-product-1.jpg" alt="" id="modalImg" class="modal-img">
+        </div>
+        <div class="thumbnails" id="thumbnailsM">
+          <img src="images/image-product-1.jpg" id= "thumb1M" alt="">
+          <img src="images/image-product-2.jpg" id= "thumb2M" alt="">
+          <img src="images/image-product-3.jpg" id= "thumb3M" alt="">
+          <img src="images/image-product-4.jpg" id= "thumb4M" alt="">
+        </div>
+      </div>
+      <div class="content-left">
+        <div class="slide-show" id="slideShow">          
+          <figure>
+            <img src="images/image-product-1.jpg" alt="" id="mainImg">
+          </figure>
+          <div class="thumbnails" id="thumbnails">
+            <img src="images/image-product-1.jpg" id= "thumb1" alt="">
+            <img src="images/image-product-2.jpg" id= "thumb2" alt="">
+            <img src="images/image-product-3.jpg" id= "thumb3" alt="">
+            <img src="images/image-product-4.jpg" id= "thumb4" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="content-right">
+        <p class="content-title">Sneaker Company</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="percent">
+          <h2>$125.00</h2>
+          <p>50%</p>
+        </div>
+        <p class="line-through">$250.00</p>
+        
+         <div class="buttons">
+           <div class="plus-minus">
+             <p class = "plus">+</p>
+             <p class= "number">0</p>
+             <p class="minus">-</p>
+           </div>
+           <button class= "btn">Add To Cart</button>
+         </div> 
+      </div>
+    </div>
+  </header>
+
+  
+  
+
+  
+  <!-- Collections
   Men
   Women
   About
@@ -34,11 +110,13 @@
   $250.00
 
   0
-  Add to cart
+  Add to cart -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+  <script src="app.js"></script>
 </body>
 </html>
