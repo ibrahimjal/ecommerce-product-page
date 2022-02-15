@@ -2,39 +2,14 @@ const menuBar = document.getElementById("menuBar");
 const closeMenu = document.getElementById("closeMenu");
 navLinks = document.getElementById("navLinks");
 
-const slideShow =document.getElementById("slideShow");
-const mainImg =document.getElementById("mainImg");
-const thumbnails =document.getElementById("thumbnails");
 
-const closeModal = document.getElementById("closeModal");
-const modalContainer = document.getElementById("modalContainer");
-const modalImg = document.getElementById("modalImg");
+const mainImgMobile = document.getElementById("mainImgMobile")
+const btnPrev = document.getElementById("btnPrev")
+const btnNext = document.getElementById("btnNext")
 
+const thumbnails =document.getElementById("thumbnails")
 
 
-thumb1 =document.getElementById("thumb1");
-thumb1Src =document.getElementById("thumb1").src;
-thumb2 =document.getElementById("thumb2");
-thumb2Src =document.getElementById("thumb2").src;
-thumb3 =document.getElementById("thumb3");
-thumb3Src =document.getElementById("thumb3").src;
-thumb4 =document.getElementById("thumb4");
-thumb4Src =document.getElementById("thumb4").src;
-
-thumb1.addEventListener("click",()=> {
-    mainImg.src = thumb1Src;
-})
-thumb2.addEventListener("click",()=> {
-    mainImg.src = thumb2Src;
-    
-})
-thumb3.addEventListener("click",()=> {
-    mainImg.src = thumb3Src;
-
-})
-thumb4.addEventListener("click",()=> {
-    mainImg.src = thumb4Src;
-})
 
 // mobile menu
 menuBar.addEventListener("click", ()=>{
@@ -45,9 +20,35 @@ closeMenu.addEventListener("click", ()=>{
 })
 
 
+// slideshow
+thumb1 =document.getElementById("thumb1");
+thumb1Src =document.getElementById("thumb1").src;
+thumb2 =document.getElementById("thumb2");
+thumb2Src =document.getElementById("thumb2").src;
+thumb3 =document.getElementById("thumb3");
+thumb3Src =document.getElementById("thumb3").src;
+thumb4 =document.getElementById("thumb4");
+thumb4Src =document.getElementById("thumb4").src;
+
+thumb1.addEventListener("click", ()=>{
+    mainImgMobile.src = thumb1Src;
+})
+thumb2.addEventListener("click", ()=>{
+    mainImgMobile.src = thumb2Src;
+})
+thumb3.addEventListener("click", ()=>{
+    mainImgMobile.src = thumb3Src;
+})
+thumb4.addEventListener("click", ()=>{
+    mainImgMobile.src = thumb4Src;
+})
+
+
+// modal
+
 // modal code
 //toggle modal open and close
-mainImg.addEventListener("click", ()=>{
+mainImgMobile.addEventListener("click", ()=>{
     modalContainer.classList.add("close-modal")
 
 })
@@ -76,4 +77,35 @@ thumb3M.addEventListener("click",()=> {
 thumb4M.addEventListener("click",()=> {
     modalImg.src = thumb4MSrc
 })
+
+
+
+// mobile slideShow
+let images = [
+    "images/image-product-1.jpg",
+    "images/image-product-2.jpg",
+    "images/image-product-3.jpg",
+    "images/image-product-4.jpg"
+]
+let i = 0
+
+
+btnPrev.addEventListener("click", ()=>{
+    i--;
+    if (i < 0){
+        i = images.length - 1;
+    }
+    mainImgMobile.src = images[i]
+})
+btnNext.addEventListener("click", ()=>{
+    i++
+    if(i > images.length - 1){
+        i = 0
+    }
+    mainImgMobile.src = images[i]
+
+})
+
+
+
 
