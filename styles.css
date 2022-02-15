@@ -13,6 +13,7 @@
     --Black-opacity-light-box : hsl(0, 0%, 0%, .75);
     --a-color-blue: #3e52a3; 
     --orange-color: #f17b30;
+    --orange-color-opacity: hsl(23, 87%, 57%, .75);
     --light-blue-buttons: #f7f8fd;
     --dark-font-color:#212325;
     --orange-color-opacity: hsl(23, 87%, 57%, .3);
@@ -338,8 +339,8 @@ nav{
     .nav-links{
         position: absolute;
         top: 0;
-        left: -50vw;
-        width: 50vw;
+        left: -70vw;
+        width: 70vw;
         height: 100vh;
         background-color: var(--dark-font-color);
         transition: .3s;
@@ -352,7 +353,7 @@ nav{
         display: block;
         position: absolute;
         top: 20px;
-        left: 20px;
+        left: 35px;
         cursor: pointer;
         font-size: 1.5rem;
         color: var(--White);
