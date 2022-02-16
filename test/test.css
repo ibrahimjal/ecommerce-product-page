@@ -13,7 +13,6 @@
     --Black-opacity-light-box : hsl(0, 0%, 0%, .75);
     --a-color-blue: #3e52a3; 
     --orange-color: #f17b30;
-    --orange-color-opacity: hsl(23, 87%, 57%, .75);
     --light-blue-buttons: #f7f8fd;
     --dark-font-color:#212325;
     --orange-color-opacity: hsl(23, 87%, 57%, .3);
@@ -82,80 +81,6 @@ nav{
     width: 3rem;
     cursor: pointer;
 }
-
-/* cart content */
-.cart-content{
-    opacity: 0; 
-    pointer-events: none;
-    position: absolute;
-    width: clamp(370px, 25%, 30%);
-    min-height: 30vh;
-    background: var(--White);
-    top: 11%;
-    right: 5%;
-    border-radius: 20px;
-    border: 1px solid var(--Grayish-blue);
-    padding: 1rem 1.5rem 0 1.5rem;
-}
-
-.show-cart{
-    opacity: 1;
-    pointer-events: auto;
-}
-.cart-top{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--Grayish-blue);
-    padding: .5rem 0;
-}
-.cart-top p{
-    font-size: 1.1rem;
-    color: var(--dark-font-color);
-}
-.close-cart{
-    font-size: 1.5rem;
-    color: var(--dark-font-color);
-    cursor: pointer;
-}
-.cart-middle{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0;
-    
-}
-.cart-middle .cart-img{
-    width: 20%;
-    border-radius: 5px;
-    margin-right: 2rem;
-}
-.middle-text p{
-    font-size: 1rem;
-    padding-bottom: .3rem;
-    margin-right: 2rem;
-    color: var(--Dark-grayish-blue);
-}
-
-.cart-delete{
-    width: 8%;
-    cursor: pointer;
-    margin-right: 0;
-}
-
-.cart-btn{
-   width: 100%;
-   padding: .7rem 0;
-   background: var(--orange-color);
-   color: var(--White);
-   font-size: 1rem;
-   border: 0;
-   outline: 0;
-   border-radius: 5px;
-   cursor: pointer;
-}
-
 
 /* content */
 
@@ -368,10 +293,6 @@ nav{
 
 
 @media only screen and (max-width: 1000px){
-    .modal-container{
-        display: none;
-    }
-    
     header {
         padding: 0;
         min-height: 100vh;
@@ -384,9 +305,9 @@ nav{
         padding: 2% 5%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 10;
-        max-width: 100%;
+        width: 100%;
         background: var(--White);
         max-height: 8vh;
     }
@@ -413,8 +334,8 @@ nav{
     .nav-links{
         position: absolute;
         top: 0;
-        left: -70vw;
-        width: 70vw;
+        left: -50vw;
+        width: 50vw;
         height: 100vh;
         background-color: var(--dark-font-color);
         transition: .3s;
@@ -427,7 +348,7 @@ nav{
         display: block;
         position: absolute;
         top: 20px;
-        left: 35px;
+        left: 20px;
         cursor: pointer;
         font-size: 1.5rem;
         color: var(--White);
@@ -460,24 +381,7 @@ nav{
         cursor: pointer;
 
     }
-    /* Cart content */
 
-    .cart-content{
-        
-        width: clamp(90vw, 25%, 500px);
-        min-height: 30vh;
-        background: var(--White);
-        top: 8vh;
-        right: 5%;
-        border-radius: 20px;
-        border: 0;
-        padding: 1rem 1.5rem 0 1.5rem;
-    }
-    .cart-btn{
-        margin-bottom: .5rem;
-    }
-
-    
     /* content section */
 
     .content{
@@ -639,4 +543,3 @@ nav{
 
 
 }
-

@@ -20,22 +20,6 @@ closeMenu.addEventListener("click", ()=>{
 })
 
 
-// Cart content
-const cart = document.getElementById("cart")
-const cartContent = document.getElementById("cartContent")
-const closeCart = document.getElementById("closeCart")
-console.log(closeCart)
-
-
-cart.addEventListener("click", ()=>{
-    cartContent.classList.toggle("show-cart")
-    closeCart.addEventListener("click", ()=>{
-        cartContent.classList.remove("show-cart")
-    })
-})
-
-
-
 // slideshow
 thumb1 =document.getElementById("thumb1");
 thumb1Src =document.getElementById("thumb1").src;
@@ -121,7 +105,3 @@ btnNext.addEventListener("click", ()=>{
     mainImgMobile.src = images[i]
 
 })
-
-
-
-
